@@ -1,0 +1,199 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CATÁLOGO DE FILMES</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/app.js" defer></script>
+</head>
+<body>
+    <header class="bg-dark text-white py-3">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- LOGO (à esquerda) -->
+                <div class="col-md-2 text-start">
+                    <img src="imagens/bigode.jpg" alt="Logo" class="img-fluid" style="max-height: 50px;">
+                </div>
+
+                <!-- Dropdown de categorias -->
+                <div class="col-md-4 d-flex align-items-center">
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownCategorias" data-bs-toggle="dropdown" aria-expanded="false">
+                            Gêneros
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownCategorias">
+                            <li><a class="dropdown-item" href="#" data-genero="Ação">Ação</a></li>
+                            <li><a class="dropdown-item" href="#" data-genero="Comedia">Comédia</a></li>
+                            <li><a class="dropdown-item" href="#" data-genero="Drama">Drama</a></li>
+                            <li><a class="dropdown-item" href="#" data-genero="Ficção">Ficção Científica</a></li>
+                        </ul>
+                    </div>
+                    <!-- Link para a página de gráficos -->
+                    <a href="graficos.html" class="btn btn-secondary ms-2">Gráficos</a>
+                </div>
+
+                <!-- Barra de pesquisa -->
+                <div class="col-md-6">
+                    <div class="input-group">
+                        <input type="text" id="searchInput" class="form-control" placeholder="Pesquise por filmes...">
+                        <button class="btn btn-primary" id="searchButton">PESQUISAR</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Carrossel -->
+    <div class="d-flex justify-content-center my-8">
+        <div id="carouselExampleCaptions" class="carousel slide w-75" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <a href="detalhes.html?id=6">
+                        <img src="imagens/Mascara.jpg" class="d-block w-100" alt="Banner 1" style="height: 600px; object-fit: cover;">
+                    </a>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Filmes em Destaque</h5>
+                        <p>Confira os clássicos que marcaram época.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <a href="detalhes.html?id=3">
+                        <img src="imagens/sw.jpg" class="d-block w-100" alt="Banner 2" style="height: 600px; object-fit: cover;">
+                    </a>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Lançamentos Imperdíveis</h5>
+                        <p>Veja os filmes mais populares do momento.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <a href="detalhes.html?id=2">
+                        <img src="imagens/kk.jpg" class="d-block w-100" alt="Banner 3" style="height: 600px; object-fit: cover;">
+                    </a>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Favoritos do Público</h5>
+                        <p>Descubra os filmes mais curtidos.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Próximo</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Container para os filmes -->
+    <div class="container-fluid mt-6">
+        <!-- Os filmes serão carregados dinamicamente aqui -->
+    </div>
+
+    <!-- Botão para Adicionar Filme -->
+    <div class="container mt-3 text-center">
+        <button id="addMovieBtn" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#movieModal">Adicionar Novo Filme</button>
+    </div>
+
+    <!-- Modal para Adicionar/Editar Filme -->
+    <div class="modal fade" id="movieModal" tabindex="-1" aria-labelledby="movieModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content bg-dark text-white">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="movieModalLabel">Adicionar Novo Filme</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="movieForm">
+                        <input type="hidden" id="movieId">
+                        <div class="mb-3">
+                            <label for="titulo" class="form-label">Título</label>
+                            <input type="text" class="form-control" id="titulo" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="genero" class="form-label">Gênero</label>
+                            <input type="text" class="form-control" id="genero" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="ano" class="form-label">Ano</label>
+                            <input type="number" class="form-control" id="ano" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="diretor" class="form-label">Diretor</label>
+                            <input type="text" class="form-control" id="diretor" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="atores" class="form-label">Atores (separados por vírgula)</label>
+                            <input type="text" class="form-control" id="atores" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="sinopse" class="form-label">Sinopse</label>
+                            <textarea class="form-control" id="sinopse" rows="3" required></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="imagem" class="form-label">URL da Imagem</label>
+                            <input type="text" class="form-control" id="imagem" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="avaliacao" class="form-label">Avaliação (0-10)</label>
+                            <input type="number" class="form-control" id="avaliacao" step="0.1" min="0" max="10" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="duracao" class="form-label">Duração (minutos)</label>
+                            <input type="number" class="form-control" id="duracao">
+                        </div>
+                        <div class="mb-3">
+                            <label for="classificacao" class="form-label">Classificação</label>
+                            <input type="text" class="form-control" id="classificacao">
+                        </div>
+                        <div class="mb-3">
+                            <label for="trailer" class="form-label">URL do Trailer</label>
+                            <input type="text" class="form-control" id="trailer">
+                        </div>
+                        <div class="mb-3">
+                            <label for="premios" class="form-label">Prêmios (separados por vírgula)</label>
+                            <input type="text" class="form-control" id="premios">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="submit" form="movieForm" class="btn btn-primary">Salvar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Seção Sobre -->
+    <section id="about-me" class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-4 text-center">
+                    <img src="imagens/eu.jpg" alt="Sua foto" class="img-fluid rounded-circle" style="max-width: 120px;">
+                </div>
+                <div class="col-md-8">
+                    <h2>Matheus Henrique Dias Moreira</h2>
+                    <p class="lead">Estudante de Sistemas de Informação na PUC Betim. Apaixonado por!</p>
+                    <ul class="list-unstyled">
+                        <li><strong>E-mail:</strong> matheushdm20@gmail.com</li>
+                        <li><strong>Telefone:</strong> 31 995023837</li>
+                        <li><strong>Formação:</strong> Ensino médio completo, estudante de Sistemas de Informação</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+

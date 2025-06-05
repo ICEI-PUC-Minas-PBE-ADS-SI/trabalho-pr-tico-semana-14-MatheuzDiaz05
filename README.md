@@ -9,15 +9,21 @@ Sugerimos o uso das seguintes ferramentas acessíveis: [FullCalendar](https://fu
 
 ## Informações do trabalho
 
-- Nome:
-- Matricula:
-- Proposta de projeto escolhida:
-- Breve descrição sobre seu projeto:
+- Nome: Matheus H Dias
+- Matricula: 881586
+- Proposta de projeto escolhida: Catalogo de filmes.
+- Breve descrição sobre seu projeto: Catalogo de filmes com cartazes de filmes classicos.
 
 **Print da tela com a implementação**
 
-<< Coloque aqui uma breve explicação da implementação feita nessa etapa>>
+<< Nesta etapa, foi criada uma nova página HTML (graficos.html) para apresentar visualmente os dados do catálogo de filmes de forma dinâmica e interativa.
 
-<<  COLOQUE A IMAGEM TELA 1 AQUI >>
+Utilizei a biblioteca Chart.js para gerar um gráfico de pizza, que exibe a quantidade de filmes por gênero (como Ação, Comédia, Drama, etc.). Os dados utilizados foram simulados com base nas informações cadastradas anteriormente por meio da funcionalidade de CRUD.
 
-<<  COLOQUE A IMAGEM TELA 2 AQUI >>
+O gráfico é responsivo, possui título e cores distintas para facilitar a compreensão. Também foram realizados testes com dois conjuntos diferentes de dados, e os resultados foram documentados por meio de capturas de tela (prints), incluídas no README.md.
+
+Essa visualização permite ao usuário interpretar facilmente a distribuição de filmes por gênero, unindo lógica, dados em JSON e design visual para enriquecer a experiência do projeto. >>
+
+<< ![alt text](Screenshot_7.png) >>
+
+<< ![alt text](Screenshot_8.png) >>

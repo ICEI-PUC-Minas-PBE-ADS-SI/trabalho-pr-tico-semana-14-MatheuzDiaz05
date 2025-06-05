@@ -1,0 +1,281 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: Arial, sans-serif;
+  height: 100%;
+  background-color: #000000;
+}
+body {
+  background: linear-gradient(to bottom, #130052, #000000);
+  color: white;
+  min-height: 100vh;
+}
+
+header {
+  background-color: #353535;
+  color: #fff;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 4px rgba(73, 73, 73, 0.1);
+}
+
+.logo img {
+  height: 50px;
+  right: 40px;
+  width: auto;  
+}
+
+.search-bar {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.search-bar input {
+  padding: 10px;
+  width: 300px;
+  margin-right: 10px;
+  border: 1px solid #ddd;
+}
+
+.search-bar button {
+  padding: 10px 15px;
+  background-color: #5004ad;
+  color: rgb(123, 0, 255);
+  border: none;
+  cursor: pointer;
+}
+
+.search-bar button:hover {
+  background-color: #496c92;
+}
+
+.main-container {
+  display: flex;
+  height: 80%;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+
+.genres {
+  width: 20%;
+  background-color: #090909;
+  color: rgb(12, 238, 254);
+  padding: 15px;
+}
+
+.genres h3 {
+  margin-bottom: 10px;
+}
+
+.genres ul {
+  list-style-type: none;
+}
+
+.genres li {
+  padding: 5px 0;
+  cursor: pointer;
+}
+
+.genres li:hover {
+  color: #007BFF;
+}
+
+
+.carousel {
+  width: 70%;
+  margin-left: 80px;
+}
+
+.carousel-images {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.movie img {
+  width: 90%;
+  height: 70%;
+  object-fit: cover;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.movie h4 {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fdfdfe;
+}
+
+
+.reviews {
+  width: 100%;
+  background-color: #4f0095;
+  padding: 15px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.reviews h3 {
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.review {
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 15px;
+}
+
+.review:last-child {
+  border-bottom: none;
+}
+
+.review p {
+  font-size: 14px;
+  color: #fcfbfb;
+  margin: 0;
+}
+
+.like-button {
+  display: block;
+  margin: 10px auto;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #8400ff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.like-button:hover {
+  background-color: #00c3ff;
+}
+
+
+header {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Ajustes nas imagens dos filmes */
+.card-img-top {
+  height: 300px;
+  object-fit: cover;
+}
+
+/* Estilos específicos para a imagem na página de detalhes */
+.container .row.mt-5 .col-md-4 {
+  /* Opcional: Adicionar padding ou margem se necessário */
+}
+
+.container .row.mt-5 .col-md-4 img.detalhes-filme-img {
+  width: 100%; /* Garante que a imagem ocupe 100% da largura de sua coluna */
+  height: auto; /* Mantém a proporção */
+  display: block; /* Ajuda na renderização */
+  margin-bottom: 20px; /* Espaço abaixo da imagem */
+}
+
+.detalhes-filme-img {
+  max-width: 100%; /* Garante que a imagem não ultrapasse a largura da coluna */
+  height: auto; /* Mantém a proporção da imagem */
+  display: block; /* Remove espaço extra abaixo da imagem */
+  margin-bottom: 20px; /* Adiciona um pouco de espaço abaixo da imagem */
+}
+
+.card {
+  transition: transform 0.2s;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border-color: #333;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+.btn-outline-primary {
+  width: 100%;
+  margin-top: 10px;
+}
+
+
+.list-unstyled li {
+  margin-bottom: 8px;
+}
+
+.list-unstyled a {
+  color: #fff;
+  transition: color 0.2s;
+}
+
+.list-unstyled a:hover {
+  color: #0d6efd;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .card-img-top {
+    height: 250px;
+  }
+  .reviews {
+      margin-top: 20px;
+  }
+}
+
+/* Ajustes nos cards com fundo escuro */
+.card.bg-dark {
+  border: 1px solid #333;
+}
+
+.card.bg-dark .card-header {
+  border-bottom: 1px solid #333;
+}
+
+.card.bg-dark .card-body {
+  background-color: #16005a;
+}
+
+.card.bg-dark .card-title {
+  color: #fff;
+}
+
+.card.bg-dark a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.card.bg-dark a:hover {
+  color: #0d6efd;
+}
+
+.carousel-item img {
+  height: 500px; 
+  object-fit: cover;
+}
+
+.carousel-caption {
+  color: #ffffff; 
+}
+
+#carouselExampleCaptions {
+  width: 100%;
+  height: 600px; 
+}
+
+#carouselExampleCaptions .carousel-item img {
+  object-fit: cover; 
+  height: 100%;
+}
+

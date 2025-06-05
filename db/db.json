@@ -13,6 +13,204 @@
       "senha": "123",
       "nome": "Usuario Comum",
       "email": "user@abc.com"
+    },
+    {
+      "id": "b1e7"
+    }
+  ],
+  "filmes": [
+    {
+      "titulo": "O Poderoso Chefão",
+      "genero": "Drama",
+      "ano": 1972,
+      "diretor": "Francis Ford Coppola",
+      "atores": [
+        "Marlon Brando",
+        "Al Pacino",
+        "James Caan"
+      ],
+      "sinopse": "Uma família mafiosa luta para estabelecer sua supremacia nos Estados Unidos depois da Segunda Guerra Mundial.",
+      "imagem": "imagens/btf.jpg",
+      "avaliacao": 9.2,
+      "duracao": 175,
+      "classificacao": "16+",
+      "trailer": "https://www.youtube.com/watch?v=UaVTIH8mujA",
+      "premios": [
+        "Oscar de Melhor Filme",
+        "Oscar de Melhor Ator (Marlon Brando)",
+        "Oscar de Melhor Roteiro Adaptado"
+      ],
+      "id": "1"
+    },
+    {
+      "id": "2",
+      "titulo": "O Senhor dos Anéis: A Sociedade do Anel",
+      "genero": "Aventura",
+      "ano": 2001,
+      "diretor": "Peter Jackson",
+      "atores": [
+        "Elijah Wood",
+        "Ian McKellen",
+        "Viggo Mortensen"
+      ],
+      "sinopse": "Um hobbit é encarregado de destruir um anel poderoso que pode salvar ou destruir a Terra-média.",
+      "imagem": "imagens/star wars.jpg",
+      "avaliacao": 8.8,
+      "duracao": 178,
+      "classificacao": "12+",
+      "trailer": "https://www.youtube.com/watch?v=V75dMMIW2B4",
+      "premios": [
+        "Oscar de Melhor Fotografia",
+        "Oscar de Melhor Maquiagem",
+        "Oscar de Melhores Efeitos Visuais",
+        "Oscar de Melhor Trilha Sonora Original"
+      ]
+    },
+    {
+      "id": "3",
+      "titulo": "Interestelar",
+      "genero": "Ficção Científica",
+      "ano": 2014,
+      "diretor": "Christopher Nolan",
+      "atores": [
+        "Matthew McConaughey",
+        "Anne Hathaway",
+        "Jessica Chastain"
+      ],
+      "sinopse": "Um grupo de astronautas viaja através de um buraco de minhoca no espaço para garantir a sobrevivência da humanidade.",
+      "imagem": "imagens/et.jpg",
+      "avaliacao": 8.6,
+      "duracao": 169,
+      "classificacao": "12+",
+      "trailer": "https://www.youtube.com/watch?v=2LqzF5WauAw",
+      "premios": [
+        "Oscar de Melhores Efeitos Visuais",
+        "Oscar de Melhor Mixagem de Som"
+      ]
+    },
+    {
+      "id": "4",
+      "titulo": "O Rei Leão",
+      "genero": "Animação",
+      "ano": 1994,
+      "diretor": "Roger Allers",
+      "atores": [
+        "Matthew Broderick",
+        "James Earl Jones",
+        "Jeremy Irons"
+      ],
+      "sinopse": "Um leão jovem tenta encontrar seu lugar no ciclo da vida após a morte de seu pai.",
+      "imagem": "imagens/kk.jpg",
+      "avaliacao": 8.5,
+      "duracao": 88,
+      "classificacao": "Livre",
+      "trailer": "https://www.youtube.com/watch?v=4sj1MT05lAA",
+      "premios": [
+        "Oscar de Melhor Trilha Sonora Original",
+        "Oscar de Melhor Canção Original"
+      ]
+    },
+    {
+      "id": "5",
+      "titulo": "Matrix",
+      "genero": "Ação",
+      "ano": 1999,
+      "diretor": "Lana Wachowski",
+      "atores": [
+        "Keanu Reeves",
+        "Laurence Fishburne",
+        "Carrie-Anne Moss"
+      ],
+      "sinopse": "Um hacker descobre que a realidade como conhecemos é uma simulação criada por máquinas.",
+      "imagem": "imagens/indiana jones.jpg",
+      "avaliacao": 8.7,
+      "duracao": 136,
+      "classificacao": "14+",
+      "trailer": "https://www.youtube.com/watch?v=vKQi3bBA1y8",
+      "premios": [
+        "Oscar de Melhor Edição",
+        "Oscar de Melhor Som",
+        "Oscar de Melhor Edição de Som",
+        "Oscar de Melhores Efeitos Visuais"
+      ]
+    },
+    {
+      "id": "6",
+      "titulo": "O Máscara",
+      "genero": "Comédia",
+      "ano": 1994,
+      "diretor": "Chuck Russell",
+      "atores": [
+        "Jim Carrey",
+        "Cameron Diaz",
+        "Peter Greene"
+      ],
+      "sinopse": "Um bancário encontra uma máscara mágica que o transforma em um ser imprevisível.",
+      "imagem": "imagens/Mascara.jpg",
+      "avaliacao": 6.9,
+      "duracao": 101,
+      "classificacao": "Livre",
+      "trailer": "https://www.youtube.com/watch?v=h3e3pl1cT84",
+      "premios": [
+        "Indicado ao Oscar de Melhores Efeitos Visuais"
+      ]
+    },
+    {
+      "id": "7",
+      "titulo": "Duna",
+      "genero": "Ficção Científica",
+      "ano": 2021,
+      "diretor": "Denis Villeneuve",
+      "atores": [
+        "Timothée Chalamet",
+        "Rebecca Ferguson",
+        "Oscar Isaac"
+      ],
+      "sinopse": "Um jovem herdeiro de uma família nobre é encarregado de proteger o ativo mais valioso da galáxia em um planeta perigoso.",
+      "imagem": "imagens/dune.jpg",
+      "avaliacao": 8,
+      "duracao": 155,
+      "classificacao": "14+",
+      "trailer": "https://www.youtube.com/watch?v=8g18jJgostQ",
+      "premios": [
+        "Oscar de Melhor Trilha Sonora Original",
+        "Oscar de Melhor Edição",
+        "Oscar de Melhor Fotografia",
+        "Oscar de Melhor Design de Produção",
+        "Oscar de Melhores Efeitos Visuais",
+        "Oscar de Melhor Som"
+      ]
+    },
+    {
+      "id": "8",
+      "titulo": "Titanic",
+      "genero": "Romance",
+      "ano": 1997,
+      "diretor": "James Cameron",
+      "atores": [
+        "Leonardo DiCaprio",
+        "Kate Winslet",
+        "Billy Zane"
+      ],
+      "sinopse": "Um artista pobre e uma aristocrata se apaixonam no fatídico navio Titanic.",
+      "imagem": "imagens/titanic.jpeg",
+      "avaliacao": 7.8,
+      "duracao": 195,
+      "classificacao": "14+",
+      "trailer": "https://www.youtube.com/watch?v=kVrpP2Kx1dw",
+      "premios": [
+        "Oscar de Melhor Filme",
+        "Oscar de Melhor Diretor",
+        "Oscar de Melhor Trilha Sonora Original",
+        "Oscar de Melhor Canção Original",
+        "Oscar de Melhor Edição",
+        "Oscar de Melhor Fotografia",
+        "Oscar de Melhor Direção de Arte",
+        "Oscar de Melhor Figurino",
+        "Oscar de Melhores Efeitos Visuais",
+        "Oscar de Melhor Som",
+        "Oscar de Melhor Edição de Som"
+      ]
     }
   ]
 }
